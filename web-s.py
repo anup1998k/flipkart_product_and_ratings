@@ -23,9 +23,9 @@ soup = BeautifulSoup(content)
 
 
 for a in soup.find_all('a',href = True,attrs={'class':'_1fQZEK'}):
-    name = a.find('div',attrs = {'class':'_4rR01T'})
-    price = a.find('div', attrs = {'class':'_30jeq3 _1_WHN1'})
-    rating = a.find('div',attrs = {'class':'_3LWZlK'})
+    name = a.find('div',attrs = {'class':'_4rR01T'}).text
+    price = a.find('div', attrs = {'class':'_30jeq3 _1_WHN1'}).text
+    rating = a.find('div',attrs = {'class':'_3LWZlK'}).text
 
     products.append(name)
     prices.append(price)
